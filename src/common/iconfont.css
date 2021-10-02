@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2807379 */
+  src: url("~@/static/iconfont/iconfont.woff2?t=1633181015042") format("woff2"),
+  url("~@/static/iconfont/iconfont.woff?t=1633181015042") format("woff"),
+  url("~@/static/iconfont/iconfont.ttf?t=1633181015042") format("truetype");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dianzan:before {
+  content: "\e601";
+}
+
+.icon-xiayigexiayishou:before {
+  content: "\e7a5";
+}
+
+.icon-bofang2:before {
+  content: "\e624";
+}
+
+.icon-zanting:before {
+  content: "\e62a";
+}
+
+.icon-iconsMusicyemianbofangmoshiPlayList:before {
+  content: "\e677";
+}
+
+.icon-iconsMusicyemianbofangmoshiAlrepeatOnejiaodian:before {
+  content: "\e678";
+}
+
+.icon-iconsMusicyemianbofangmoshiRepeat:before {
+  content: "\e67a";
+}
+
+.icon-iconsMusicyemianbofangmoshiShuffle:before {
+  content: "\e67b";
+}
+
+.icon-bofangliebiao:before {
+  content: "\e6a7";
+}
+
+.icon-diandiandianshu:before {
+  content: "\e679";
+}
+
+.icon-fenxiang:before {
+  content: "\e616";
+}
+
+.icon-xiaoxi1:before {
+  content: "\e66c";
+}
+
+.icon-aixin:before {
+  content: "\e617";
+}
+
+.icon-gexingzhuangban:before {
+  content: "\e655";
+}
+
+.icon-xiaoxi:before {
+  content: "\e63b";
+}
+
+.icon-biaoqing:before {
+  content: "\e60f";
+}
+
+.icon-geren:before {
+  content: "\e65a";
+}
+
+.icon-shangyishoushangyige:before {
+  content: "\e78a";
+}
+
+.icon-bofang:before {
+  content: "\e600";
+}
+
+.icon-search-line:before {
+  content: "\e63c";
+}
+
+.icon-bofang1:before {
+  content: "\e634";
+}
+
+.icon-gedan:before {
+  content: "\e636";
+}
+
+.icon-zanting_huaban:before {
+  content: "\e639";
+}
+
+.icon-zhibo:before {
+  content: "\e73a";
+}
+
+.icon-paihangbang1:before {
+  content: "\e61a";
+}
+
+.icon-VIP:before {
+  content: "\e7ad";
+}
+
+.icon-tuijian:before {
+  content: "\e629";
+}
+
+.icon-diantai2:before {
+  content: "\e693";
+}
+
+.icon-vip1:before {
+  content: "\e61e";
+}
+
+.icon-top:before {
+  content: "\e608";
+}
+

@@ -1,11 +1,17 @@
-# uniapp-music
+# uni-app_music
+
+## 项目描述
+
+使用uni-app仿造云音乐，实现多端访问
 
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
