@@ -65,3 +65,65 @@ export function list (listId) {
     method: 'GET'
   });
 }
+
+/**
+ * 歌曲详情
+ * @param songId
+ * @returns {RequestTask}
+ */
+export function songDetail (songId) {
+  return uni.request({
+    url: `${baseUrl}/song/detail?ids=${songId}`,
+    method: 'GET'
+  });
+}
+
+/**
+ * 相似歌曲
+ * @param songId
+ * @returns {RequestTask}
+ */
+export function songSiMi (songId) {
+  return uni.request({
+    url: `${baseUrl}/simi/song?id=${songId}`,
+    method: 'GET'
+  });
+}
+
+/**
+ * 歌曲评论
+ * @param songId
+ * @returns {RequestTask}
+ */
+export function songComment (songId) {
+  return uni.request({
+    url: `${baseUrl}/comment/music?id=${songId}&limit=5`,
+    method: 'GET'
+  });
+}
+
+/**
+ * 歌词
+ * @param songId
+ * @returns {RequestTask}
+ */
+export function songLyric (songId) {
+  return uni.request({
+    url: `${baseUrl}/lyric?id=${songId}`,
+    method: 'GET'
+  });
+}
+
+/**
+ * 歌曲的url
+ * @param songId
+ * @returns {RequestTask}
+ */
+export function songUrl (songId) {
+  return uni.request({
+    url: `${baseUrl}/song/url?id=${songId}`,
+    method: 'GET'
+  });
+}
+
+

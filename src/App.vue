@@ -2,13 +2,13 @@
 import '@/common/iconfont.css';
 
 export default {
-  onLaunch: function () {
+  onLaunch () {
     console.log('App Launch');
   },
-  onShow: function () {
+  onShow () {
     console.log('App Show');
   },
-  onHide: function () {
+  onHide () {
     console.log('App Hide');
   }
 };
@@ -34,7 +34,7 @@ export default {
   height: 100vh;
   background-size: cover;
   background-position: center 0;
-  filter: blur(10px);
+  filter: blur(20px);
   transform: scale(1.2);
 }
 </style>

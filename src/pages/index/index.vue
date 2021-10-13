@@ -10,7 +10,8 @@
         </view>
         <!--榜单-->
         <view class="indexList">
-          <view v-for="(item,index) in topList" :key="index" class="indexListItem" @tap="handleToList(item.listId)">
+          <view v-for="(item,index) in topList" :key="index" class="indexListItem"
+                @tap="handleToList(item.listId)">
             <view class="indexListItemImg">
               <image :src="item.coverImgUrl"></image>
               <text>{{ item.updateFrequency }}</text>
@@ -28,7 +29,6 @@
 </template>
 
 <script>
-
 import musicHead from '@/components/musicHead/musicHead';
 import { topList } from '@/common/api';
 
