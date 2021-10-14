@@ -4,19 +4,19 @@
     <view class="container">
       <scroll-view class="scroll" scroll-y>
         <!--搜索-->
-        <view class="indexSearch">
+        <view class="index-search" @tap="handleToSearch">
           <text class="iconfont icon-search-line"></text>
           <input placeholder="搜索歌曲" type="text">
         </view>
         <!--榜单-->
-        <view class="indexList">
-          <view v-for="(item,index) in topList" :key="index" class="indexListItem"
+        <view class="index-list">
+          <view v-for="(item,index) in topList" :key="index" class="index-list-item"
                 @tap="handleToList(item.listId)">
-            <view class="indexListItemImg">
+            <view class="index-list-item-img">
               <image :src="item.coverImgUrl"></image>
               <text>{{ item.updateFrequency }}</text>
             </view>
-            <view class="indexListItemText">
+            <view class="index-list-item-text">
               <view v-for="(item,index) in item.tracks" :key="index">
                 {{ index + 1 }}.{{ item.first }}-{{ item.second }}
               </view>
@@ -56,6 +56,12 @@ export default {
       uni.navigateTo({
         url: '/pages/list/list?listId=' + listId
       });
+    },
+    // 跳转到搜索页
+    handleToSearch(){
+      uni.navigateTo({
+        url:'/pages/search/search'
+      })
     }
   }
 };
@@ -63,61 +69,61 @@ export default {
 
 <style scoped>
 //搜索
-.indexSearch {
+.index-search {
   display: flex;
   align-items: center;
-  height: 70 rpx;
-  margin: 70 rpx 30 rpx 30 rpx 30 rpx;
+  height: 70rpx;
+  margin: 70rpx 30rpx 30rpx 30rpx;
   background-color: #f7f7f7;
-  border-radius: 50 rpx;
+  border-radius: 50rpx;
 }
 
-.indexSearch text {
-  font-size: 26 rpx;
-  margin-right: 26 rpx;
-  margin-left: 28 rpx;
+.index-search text {
+  font-size: 26rpx;
+  margin-right: 26rpx;
+  margin-left: 28rpx;
 }
 
-.indexSearch input {
-  font-size: 28 rpx;
+.index-search input {
+  font-size: 28rpx;
   flex: 1;
 }
 
 //榜单
-.indexList {
-  margin: 0 30 rpx;
+.index-list {
+  margin: 0 30rpx;
 }
 
-.indexListItem {
+.index-list-item {
   display: flex;
-  margin-bottom: 34 rpx;
+  margin-bottom: 34rpx;
 }
 
-.indexListItemImg {
+.index-list-item-img {
   position: relative;
-  width: 212 rpx;
-  height: 212 rpx;
-  margin-right: 30 rpx;
-  border-radius: 30 rpx;
+  width: 212rpx;
+  height: 212rpx;
+  margin-right: 30rpx;
+  border-radius: 30rpx;
   overflow: hidden;
 }
 
-.indexListItemImg image {
+.index-list-item-img image {
   width: 100%;
   height: 100%;
 }
 
-.indexListItemImg text {
+.index-list-item-img text {
   position: absolute;
-  left: 12 rpx;
-  bottom: 16 rpx;
+  left: 12rpx;
+  bottom: 16rpx;
   color: #fff;
-  font-size: 20 rpx;
+  font-size: 20rpx;
 }
 
-.indexListItemText {
-  font-size: 24 rpx;
-  line-height: 66 rpx;
+.index-list-item-text {
+  font-size: 24rpx;
+  line-height: 66rpx;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

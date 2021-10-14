@@ -126,4 +126,36 @@ export function songUrl (songId) {
   });
 }
 
+/**
+ * 热搜列表详情
+ * @returns {RequestTask}
+ */
+export function searchHot () {
+  return uni.request({
+    url: `${baseUrl}/search/hot/detail`,
+    method: 'GET'
+  });
+}
 
+/**
+ * 搜索
+ * @returns {RequestTask}
+ */
+export  function searchKeyword (keyword) {
+  return uni.request({
+    url: `${baseUrl}/search?keywords=${keyword}`,
+    method: 'GET'
+  });
+}
+
+/**
+ * 搜索建议
+ * @param keyword
+ * @returns {RequestTask}
+ */
+export  function searchSuggest (keyword) {
+  return uni.request({
+    url: `${baseUrl}/search/suggest?keywords=${keyword}&type=mobile`,
+    method: 'GET'
+  });
+}

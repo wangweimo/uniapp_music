@@ -110,7 +110,13 @@ export default {
         title: '正在加载...'
       });
       this.isLoading = true;
-      Promise.all([songDetail(songId), songSiMi(songId), songComment(songId), songLyric(songId), songUrl(songId)]).then((res) => {
+      Promise.all([
+				songDetail(songId),
+				songSiMi(songId),
+				songComment(songId),
+				songLyric(songId),
+				songUrl(songId)
+				]).then((res) => {
         if (res[0][1].data.code === 200) {
           this.songDetail = res[0][1].data.songs[0];
         }
@@ -221,9 +227,9 @@ export default {
 //磁盘
 .detail-play {
   position: relative;
-  width: 580 rpx;
-  height: 580 rpx;
-  margin: 214 rpx auto 0 auto;
+  width: 580rpx;
+  height: 580rpx;
+  margin: 214rpx auto 0 auto;
   background-image: url(~@/static/images/disc.png);
   background-size: cover;
 }
@@ -235,8 +241,8 @@ export default {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 370 rpx;
-  height: 370 rpx;
+  width: 370rpx;
+  height: 370rpx;
   border-radius: 50%;
   animation: 10s linear move infinite;
   animation-play-state: paused;
@@ -261,32 +267,34 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 100 rpx;
-  height: 100 rpx;
+  width: 100rpx;
+  height: 100rpx;
   margin: auto;
-  font-size: 100 rpx;
+  font-size: 100rpx;
   color: #fff;
 }
 
 .detail-play view {
   position: absolute;
-  left: 100 rpx;
+  left: 100rpx;
   right: 0;
-  top: -200 rpx;
+  top: -200rpx;
   margin: auto;
-  width: 230 rpx;
-  height: 360 rpx;
+  width: 230rpx;
+  height: 360rpx;
   background-image: url(~@/static/images/needle.png);
   background-size: cover;
 }
 
 //歌词
 .detail-lyric {
-  height: 246 rpx;
-  font-size: 32 rpx;
-  line-height: 82 rpx;
+  height: 246rpx;
+  font-size: 32rpx;
+  line-height: 82rpx;
   text-align: center;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #6f6e73;
 }
 
@@ -295,41 +303,41 @@ export default {
 }
 
 .detail-lyric-item {
-  height: 82 rpx;
+  height: 82rpx;
 }
 
 .detail-lyric-item.active {
   color: #fff;
-  font-size: 20 rpx;
+  font-size: 40rpx;
 }
 
 //相关推荐
 .detail-like {
-  margin: 0 30 rpx;
+  margin: 0 30rpx;
 }
 
 .detail-like-head {
-  font-size: 36 rpx;
+  font-size: 36rpx;
   color: #fff;
-  margin: 50 rpx 0;
+  margin: 50rpx 0;
 }
 
 .detail-like-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20 rpx;
+  margin-bottom: 20rpx;
 }
 
 .detail-like-item text {
-  font-size: 50 rpx;
+  font-size: 50rpx;
   color: #c6c2bf;
 }
 
 .detail-like-img {
-  width: 82 rpx;
-  height: 82 rpx;
-  margin-right: 20 rpx;
-  border-radius: 20 rpx;
+  width: 82rpx;
+  height: 82rpx;
+  margin-right: 20rpx;
+  border-radius: 20rpx;
   overflow: hidden;
 }
 
@@ -344,41 +352,41 @@ export default {
 }
 
 .detail-like-song view:nth-child(1) {
-  font-size: 28 rpx;
+  font-size: 28rpx;
   color: #fff;
-  margin-bottom: 12 rpx;
+  margin-bottom: 12rpx;
 }
 
 .detail-like-song view:nth-child(2) {
-  font-size: 22 rpx;
+  font-size: 22rpx;
 }
 
 .detail-like-song image {
-  width: 26 rpx;
-  height: 20 rpx;
-  margin-right: 10 rpx;
+  width: 26rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
 }
 
 //评论
 .detail-comment {
-  margin: 0 30 rpx;
+  margin: 0 30rpx;
 }
 
 .detail-comment-head {
-  font-size: 36 rpx;
+  font-size: 36rpx;
   color: #fff;
-  margin: 50 rpx 0;
+  margin: 50rpx 0;
 }
 
 .detail-comment-item {
   display: flex;
-  margin-bottom: 28 rpx;
+  margin-bottom: 28rpx;
 }
 
 .detail-comment-img {
-  width: 64 rpx;
-  height: 64 rpx;
-  margin-right: 18 rpx;
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 18rpx;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -399,23 +407,23 @@ export default {
 }
 
 .detail-comment-name view:nth-child(1) {
-  font-size: 26 rpx;
+  font-size: 26rpx;
 }
 
 .detail-comment-name view:nth-child(2) {
-  font-size: 20 rpx;
+  font-size: 20rpx;
 }
 
 .detail-comment-like {
-  font-size: 28 rpx;
+  font-size: 28rpx;
 }
 
 .detail-comment-text {
-  margin-top: 20 rpx;
-  font-size: 26 rpx;
-  line-height: 40 rpx;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
   color: #fff;
   border-bottom: 1px solid #eee;
-  padding-bottom: 40 rpx;
+  padding-bottom: 40rpx;
 }
 </style>
