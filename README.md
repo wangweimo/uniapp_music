@@ -1,25 +1,27 @@
 # uni-app_music
 
+## 项目简介
+
+项目名称：仿网易云音乐播放器
+
+开发方式：前后端分离
+
+主要技术栈：Vue.js、CSS、uni-app、JavaScript
+
 ## 项目描述
 
-使用uni-app仿造云音乐，实现多端访问
+该项目后端使用的网易云音乐开放接口（Node.js）。
 
-## Project setup
+前端部分使用了uni-app框架，实现了H5端和微信小程序端的访问。
 
-```
-npm install
-```
+该项目目前实现了用户登录、排行榜、搜索、歌曲播放、歌词获取、相关歌曲推荐和用户评论等功能
 
-### Compiles and hot-reloads for development
+## 项目总结
 
-```
-npm run serve
-```
+1. 后端获取到的部分数据比较复杂，由于不够仔细，拿到了错误的数据，造成了一些麻烦，需要记住教训，以后要仔细分析数据结构，不能马虎。
+2. 对css的处理比较粗糙，写了大量的重复代码，复用度不高，需要抽时间对css进行重构
+3. 没有封装属于自己的工具方法，写了很多重复的js代码，需要学会封装工具函数，提高代码的复用率
+4. 熟悉了uni-app框架的使用方式，知道一套代码如何运行在多端
+5. 。。。
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+总之，通过这个项目，学到了不少的新知识，也注意到了很多以前没有关注到的知识点。
